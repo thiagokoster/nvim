@@ -1,3 +1,4 @@
+vim.g.termguicolors = true
 vim.g.mapleader = " "
 
 vim.opt.expandtab = true
