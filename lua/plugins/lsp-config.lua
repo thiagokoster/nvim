@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "gopls", "rust_analyzer"}
+        ensure_installed = {"lua_ls", "gopls", "rust_analyzer", "csharp_ls"}
       })
     end
   },
@@ -22,6 +22,7 @@ return {
       lspconfig.lua_ls.setup({capabilities = capabilities})
       lspconfig.gopls.setup({capabilities = capabilities})
       lspconfig.rust_analyzer.setup({capabilities = capabilities})
+      lspconfig.csharp_ls.setup({capabilities = capabilities})
 
       -- diagnostics
       vim.keymap.set('n','<leader>ds', vim.diagnostic.open_float)
